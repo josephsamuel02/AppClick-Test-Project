@@ -1,0 +1,46 @@
+a {
+    text-decoration: none;
+}
+
+.home {
+    margin: 40px auto;
+    padding: 0px;
+
+    width: 500px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 30px;
+}
+.viewModal {
+    margin: 10px;
+    padding: 40px;
+    justify-content: center;
+    height: auto;
+    width: 300px;
+    min-height: 400px;
+    background-color: white;
+}
+.viewModal h2 {
+    margin: 0px auto 120px;
+    padding: 5px;
+    text-align: center;
+    font-size: 34px;
+    color: rgb(31, 31, 230);
+}
+
+.viewModal button {
+    margin: 40px auto;
+    padding: 17px 40px;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    background-color: blue;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    color: white;
+}
