@@ -9,6 +9,10 @@ const Preview = () => {
     const [videofile, setVideofile] = useState();
     const [videoPlaceH, setVideoPlaceH] = useState(true);
     const [vidCurrentTime, setVidCurrentTime] = useState();
+
+    const [name, setName] = useState();
+    const [email, setEmail] = useState();
+
     const [form, setForm] = useState(false);
     const uploadVideo = (e) => {
         setVideoUrl(false);
@@ -19,16 +23,27 @@ const Preview = () => {
         setVideoPlaceH(false);
     };
 
-    // useEffect(
-    //     () => (vidCurrentTime == 3 ? setForm(true) : null),
-    //     [vidCurrentTime]
-    // );
+    // useEffect(() => {
+    //     console.log(myiframe);
+    // }, []);
     return (
         <div className="preview">
             <h5>Preview</h5>
             {vidCurrentTime < 20 && form == true && (
-                <div className="template">
-                    <form style={{ backgroundColor: formStyle.theme }}>
+                <div
+                    className="template"
+                    style={
+                        formStyle.formposition == "left"
+                            ? { left: "5%" }
+                            : { right: "5%" }
+                    }
+                >
+                    <form
+                        style={{
+                            backgroundColor: formStyle.theme,
+                            borderRadius: formStyle.formBorder,
+                        }}
+                    >
                         <br /> <br />
                         <input
                             type="text"
@@ -37,6 +52,7 @@ const Preview = () => {
                                 color: formStyle.textColor,
                                 fontSize: formStyle.fontSize,
                             }}
+                            onChange={(e) => setName(e.target.value)}
                         />
                         <input
                             type="text"
@@ -45,6 +61,7 @@ const Preview = () => {
                                 color: formStyle.textColor,
                                 fontSize: formStyle.fontSize,
                             }}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                         <br /> <br />
                         <button
@@ -53,8 +70,6 @@ const Preview = () => {
                             onClick={(e) => {
                                 e.preventDefault();
                                 setForm(false);
-
-                                console.log(formStyle.theme);
                             }}
                         >
                             Submit
@@ -99,12 +114,9 @@ const Preview = () => {
                         src={`https://www.youtube.com/embed/${videoUrl}`}
                         title="YouTube video player"
                         allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        onChange={() => {
-                            // setVidCurrentTime(e.target.currentTime);
-                            console.log("e.target.getDuration()");
+                        // onChange={() => {
 
-                            // console.log(player.getDuration());
-                        }}
+                        // }}
                     ></iframe>
                 )}
             </div>
@@ -127,13 +139,20 @@ const Preview = () => {
                     uploadVideo(e);
                 }}
             />
-            <input
+            {/* <input
                 type="button"
                 name=""
                 id=""
                 value={"Preview"}
                 onClick={() => {}}
-            />
+            /> */}
+
+            {!form && (
+                <ul>
+                    <li>{name}</li>
+                    <li>{email}</li>
+                </ul>
+            )}
         </div>
     );
 };

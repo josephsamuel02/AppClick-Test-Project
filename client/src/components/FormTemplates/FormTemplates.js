@@ -6,18 +6,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { FormDetail } from "../../store/actions/FormDetail";
 const FormTemplates = () => {
     const dispatch = useDispatch();
-    const [theme, setTheme] = useState("white");
-    const [textColor, setTextColor] = useState("black");
-    const [fSize, setFSize] = useState("14px");
-    const [formposition, setFormposition] = useState("center");
-    const [popTime, sePupTiime] = useState(500);
-
+    const [theme, setTheme] = useState();
+    const [textColor, setTextColor] = useState();
+    const [fSize, setFSize] = useState();
+    const [formposition, setFormposition] = useState();
+    const [popTime, sePupTiime] = useState();
+    const [formBorder, setFormBorder] = useState();
     const formDetails = {
         theme: theme,
         textColor: textColor,
         fontSize: fSize,
         formposition: formposition,
         popTime: popTime,
+        formBorder: formBorder,
     };
 
     const saveDetaail = () => {
@@ -39,13 +40,12 @@ const FormTemplates = () => {
     const mystyle2 = {
         margin: "20px auto 3px",
         padding: "40px 2px 20px",
-
         position: "relative",
         top: "10%",
         maxWidth: "275px",
         height: "auto",
         backgroundColor: theme,
-        borderRadius: "100%",
+        borderRadius: "100px",
     };
     const [temp, setTemp] = useState(mystyle1);
 
@@ -55,14 +55,20 @@ const FormTemplates = () => {
                 <div className="tempbtnBox">
                     <button
                         className="tempbtn"
-                        onClick={() => setTemp(mystyle1)}
+                        onClick={() => {
+                            setTemp(mystyle1);
+                            setFormBorder("5px 40px");
+                        }}
                     >
                         Template 1
                     </button>
 
                     <button
                         className="tempbtn"
-                        onClick={() => setTemp(mystyle2)}
+                        onClick={() => {
+                            setTemp(mystyle2);
+                            setFormBorder("100px");
+                        }}
                     >
                         Template 2
                     </button>
@@ -132,9 +138,7 @@ const FormTemplates = () => {
                         <select
                             name=""
                             id=""
-                            onSelectCapture={(e) =>
-                                setFormposition(e.target.value)
-                            }
+                            onChange={(e) => setFormposition(e.target.value)}
                         >
                             <option value="left">Span Left</option>
                             <option value="center"> Center</option>
@@ -146,7 +150,7 @@ const FormTemplates = () => {
                         <select
                             name=""
                             id=""
-                            onSelectCapture={(e) => sePupTiime(e.target.value)}
+                            onChange={(e) => sePupTiime(e.target.value)}
                         >
                             <option value={300}>30s</option>
                             <option value={1000}> 1m</option>
