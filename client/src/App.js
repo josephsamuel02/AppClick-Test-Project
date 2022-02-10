@@ -5,6 +5,7 @@ import {
     Routes,
     Route,
     Navigate,
+    Link,
 } from "react-router-dom";
 
 import Index from "./components/UserId/Index";
@@ -17,10 +18,12 @@ function App() {
         <div className="App">
             <div className="AppBackground">
                 <div className="App-logo">
-                    <img
-                        src="http://www.appclicktech.com/imgs/appclicktechnology-logo-website-developer-ibadan.png"
-                        alt="AppClick-Logo"
-                    />
+                    <Link to={"/"}>
+                        <img
+                            src="http://www.appclicktech.com/imgs/appclicktechnology-logo-website-developer-ibadan.png"
+                            alt="AppClick-Logo"
+                        />
+                    </Link>
                 </div>
 
                 <Router>
