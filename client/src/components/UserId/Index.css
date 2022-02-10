@@ -45,7 +45,7 @@
     display: flex;
 }
 
-.viewModal .btnBoxx button {
+.viewModal .btnBoxx .Tbtn {
     margin: auto;
     padding: 6px 40px;
     /* width: 100px;
@@ -63,7 +63,7 @@
         -1px -1px 5px 1px rgba(182, 179, 179, 0.52);
 }
 
-.viewModal .btnBoxx button:hover {
+.viewModal .btnBoxx .Tbtn:hover {
     background-color: hsl(225, 100%, 65%);
 }
 

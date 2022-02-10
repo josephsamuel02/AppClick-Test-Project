@@ -4,8 +4,8 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Navigate,
-    Link,
+    // Navigate,
+    // Link,
 } from "react-router-dom";
 
 import Index from "./components/UserId/Index";
@@ -17,24 +17,18 @@ function App() {
     return (
         <div className="App">
             <div className="AppBackground">
-                <div
-                    className="App-logo"
-                    onClick={() => window.location.replace("/")}
-                >
+                <div className="App-logo">
                     <img
                         src="http://www.appclicktech.com/imgs/appclicktechnology-logo-website-developer-ibadan.png"
                         alt="AppClick-Logo"
                     />
                 </div>
 
-                {/* /////////////////// */}
-                {/* <Index /> */}
-                {/* ////////////////// */}
                 <Router>
                     <Routes>
                         <Route path="/home" element={<Home />} />
                         <Route path="/preview" element={<Preview />} />
-                        <Route
+                        {/* <Route
                             path="/"
                             element={
                                 theuser ? (
@@ -43,10 +37,9 @@ function App() {
                                     <Index />
                                 )
                             }
-                        />
-
-                        <Route path="/" element={<Index />} />
+                        /> */}
                         <Route path="/templates" element={<FormTemplates />} />
+                        <Route path="/" element={<Index />} />{" "}
                     </Routes>
                 </Router>
             </div>

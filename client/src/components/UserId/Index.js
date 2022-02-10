@@ -17,7 +17,10 @@ const Index = () => {
                     <button className="Tbtn" onClick={() => setComp("login")}>
                         Login
                     </button>
-                    <button onClick={() => setComp("register")}>
+                    <button
+                        className="Tbtn"
+                        onClick={() => setComp("register")}
+                    >
                         Register
                     </button>
                 </div>
