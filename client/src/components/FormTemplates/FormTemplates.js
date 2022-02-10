@@ -152,10 +152,10 @@ const FormTemplates = () => {
                             id=""
                             onChange={(e) => sePupTiime(e.target.value)}
                         >
-                            <option value={300}>30s</option>
-                            <option value={1000}> 1m</option>
-                            <option value={2000}> 2m</option>
-                            <option value={5000}> 5m</option>
+                            <option value={1000}>1s</option>
+                            <option value={2000}> 2s</option>
+                            <option value={5000}> 5s</option>
+                            <option value={10000}> 10s</option>
                         </select>
                     </span>
                     <br /> <br />

@@ -32,9 +32,9 @@
 }
 
 .App-logo {
-    margin: 20px;
+    margin: 10px 20px;
     padding: 10px;
-    border: solid 1px rgb(233, 143, 70);
+    /* border: solid 1px rgb(233, 143, 70); */
     width: 120px;
     height: 70px;
 }

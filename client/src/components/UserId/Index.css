@@ -20,33 +20,51 @@
 
     background-color: white;
     border-radius: 30px;
+    box-shadow: 1px 1px 2px 1px rgba(182, 179, 179, 0.52),
+        -1px -1px 5px 1px rgba(182, 179, 179, 0.52);
 }
-.title {
+
+.viewModal:hover {
+    box-shadow: 1px 1px 8px 1px rgba(155, 154, 154, 0.746),
+        -1px -1px 2px 1px rgba(182, 179, 179, 0.301);
+}
+
+.index .viewModal .title {
     margin: 0px auto 26px;
     padding: 5px;
     text-align: center;
-    font-size: 23px;
-    color: rgb(18, 72, 233);
+    font-size: 18px;
+    color: hsl(225, 100%, 65%);
+    font-family: sans-serif;
 }
 
-.btnBox {
+.viewModal .btnBoxx {
     margin: 10px auto;
     padding: 5px;
-
+    width: 100%;
     display: flex;
 }
 
-.btnBox button {
+.viewModal .btnBoxx button {
     margin: auto;
-    padding: 6px 10px;
-    width: 100px;
-    height: auto;
+    padding: 6px 40px;
+    /* width: 100px;
+    height: auto; */
     border: none;
+    display: flex;
+
     border-radius: 20px;
-    background-color: blue;
+    background-color: #3366ff;
     color: whitesmoke;
     font-size: 17px;
     font-weight: lighter;
+
+    box-shadow: 1px 1px 2px 1px rgba(182, 179, 179, 0.52),
+        -1px -1px 5px 1px rgba(182, 179, 179, 0.52);
+}
+
+.viewModal .btnBoxx button:hover {
+    background-color: hsl(225, 100%, 65%);
 }
 
 form {
@@ -73,10 +91,14 @@ form #btn {
     display: flex;
     outline: none;
     border: none;
-    background-color: blue;
+    background-color: #3366ff;
     font-size: 17px;
     border-radius: 30px;
     color: white;
+}
+
+form #btn:hover {
+    background-color: hsl(225, 100%, 65%);
 }
 
 form p {

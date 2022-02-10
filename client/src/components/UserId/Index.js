@@ -13,8 +13,10 @@ const Index = () => {
         <div className="index">
             <div className="viewModal">
                 <h3 className="title">Interactive Video Form App</h3>
-                <div className="btnBox">
-                    <button onClick={() => setComp("login")}>Login</button>
+                <div className="btnBoxx">
+                    <button className="Tbtn" onClick={() => setComp("login")}>
+                        Login
+                    </button>
                     <button onClick={() => setComp("register")}>
                         Register
                     </button>

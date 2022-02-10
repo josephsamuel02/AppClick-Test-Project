@@ -44,7 +44,7 @@ const Login = () => {
                 ) : null}
                 <br /> <br />
                 <input
-                    type="text"
+                    type="password"
                     id="password"
                     placeholder="password"
                     onChange={formik.handleChange}

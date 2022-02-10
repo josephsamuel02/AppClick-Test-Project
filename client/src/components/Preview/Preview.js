@@ -28,14 +28,14 @@ const Preview = () => {
     // }, []);
     return (
         <div className="preview">
-            <h5>Preview</h5>
+            <h5>Preview</h5> <br />
             {vidCurrentTime < 20 && form == true && (
                 <div
                     className="template"
                     style={
                         formStyle.formposition == "left"
                             ? { left: "5%" }
-                            : { right: "5%" }
+                            : { right: "1%" }
                     }
                 >
                     <form
@@ -78,7 +78,6 @@ const Preview = () => {
                     </form>
                 </div>
             )}
-
             <div className="videoBox">
                 {videoPlaceH && (
                     <div className="placeholder">
@@ -130,7 +129,9 @@ const Preview = () => {
                     setVideoUrl(url);
                 }}
             />
-            <h4 style={{ margin: "0px", color: "blue" }}>Or</h4>
+            <h4 style={{ margin: "0px", color: "blue", display: "flex" }}>
+                Or
+            </h4>
             <input
                 type="file"
                 name=""
@@ -146,7 +147,6 @@ const Preview = () => {
                 value={"Preview"}
                 onClick={() => {}}
             /> */}
-
             {!form && (
                 <ul>
                     <li>{name}</li>

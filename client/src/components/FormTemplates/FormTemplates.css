@@ -18,6 +18,10 @@
     flex-direction: row;
     /* background-color: white; */
     border-radius: 20px;
+
+    border-radius: 40px;
+    box-shadow: 1px 1px 2px 1px rgba(180, 179, 179, 0.493),
+        -1px -1px 2px 1px rgba(170, 167, 167, 0.383);
 }
 
 .temp {
@@ -46,11 +50,13 @@
     padding: 5px 15px;
     border: none;
     border-radius: 20px;
-    background-color: blue;
+    background-color: #3366ff;
     color: white;
     font-size: 13px;
 }
-
+.tempbtn:hover {
+    background-color: hsl(225, 100%, 65%);
+}
 #temp1 form {
     margin: 20px auto;
     padding: 40px 2px 20px;
@@ -75,7 +81,7 @@
     display: flex;
     position: relative;
 
-    border: solid 1px blue;
+    border: solid 1px #3366ff;
 
     width: 200px;
     height: 20px;
@@ -88,26 +94,31 @@
     display: flex;
     outline: none;
     border: none;
-    background-color: rgb(17, 68, 236);
+    background-color: #3366ff;
     font-size: 14px;
     border-radius: 30px;
     color: white;
 }
-
+#temp1 form #btn:hover {
+    background-color: hsl(225, 100%, 65%);
+}
 /* Template 2 */
 #temp2 {
     margin: 1px;
     padding: 1px;
     height: 100%;
     width: 50%;
+    /* justify-content: center;
+    align-items: center; */
 }
 
 #temp2 .tempBox {
-    margin: 90px 15px 5px;
+    margin: 90px auto 5px;
     padding: 1px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* align-items: center; */
 }
 
 .tempBox span {
@@ -128,14 +139,18 @@
 
 #temp2 .tempBox button {
     margin: 20px auto;
-    padding: 10px 160px;
+    padding: 10px 140px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid 1px gray;
+    border: none;
     color: white;
-    background-color: blue;
+    background-color: #3366ff;
     border-radius: 50px;
     font-size: 18px;
     font-family: sans-serif;
+    max-width: 100%;
+}
+#temp2 .tempBox button:hover {
+    background-color: hsl(225, 100%, 65%);
 }

@@ -28,8 +28,9 @@ a {
     padding: 5px;
     text-align: center;
     font-size: 34px;
-    color: rgb(31, 31, 230);
+    color: #3366ff;
 }
+/* background-color: hsl(225, 100%, 65%); */
 
 .viewModal button {
     margin: 40px auto;
@@ -37,10 +38,17 @@ a {
     display: flex;
     margin: auto;
     text-align: center;
-    background-color: blue;
+    background-color: #3366ff;
     border-radius: 30px;
     outline: none;
     border: none;
     font-size: 17px;
     color: white;
+    box-shadow: 1px 1px 2px 1px rgba(182, 179, 179, 0.52),
+        -1px -1px 5px 1px rgba(182, 179, 179, 0.52);
+}
+
+.viewModal button:hover {
+    margin: 40px auto;
+    background-color: hsl(225, 100%, 65%);
 }

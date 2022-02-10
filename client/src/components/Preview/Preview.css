@@ -1,4 +1,6 @@
 .preview {
+    margin: 40px;
+    padding: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,168 +9,476 @@
     top: 8%;
     left: 0%;
     right: 0%;
+    max-width: 100%;
+    max-height: 100%;
     z-index: 1;
-}
-.preview .videoBox {
-    margin: auto;
-    padding: 0px;
 
-    position: relative;
-    top: 1%;
-    left: 2%;
-    right: 2%;
-    width: 600px;
-    height: auto;
-}
-.videoBox .placeholder {
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    height: 300px;
-    width: 100%;
-    /* border: solid 1px; */
-    background-color: rgba(115, 145, 245, 0.116);
-    border-radius: 11px;
-}
-
-.videoBox .placeholder p {
-    margin: auto;
-    padding: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 100px;
-    color: rgb(30, 90, 255);
-    /* -webkit-animation: spin 4s linear infinite;
-    -moz-animation: spin 4s linear infinite; */
-    animation: spin 4s linear infinite;
-}
-/* @-moz-keyframes spin {
-    100% {
-        -moz-transform: rotate(360deg);
-    }
-}
-@-webkit-keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}*/
-@keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-.videoBox video {
-    margin: 0px;
-    padding: 0px;
-
-    height: 300px;
-    width: 100%;
-}
-
-.videoBox iframe {
-    margin: 0px;
-    padding: 0px;
-    height: 300px;
-    width: 100%;
-}
-.preview input {
-    margin: 20px auto;
-    padding: 5px 10px;
-    border-radius: 15px;
-    border: solid 1px blue;
-    width: 200px;
-    outline: none;
-}
-
-/* Styling for Form */
-
-.template {
-    margin: auto;
-    padding: 10px;
-    max-height: 330px;
-    width: 500px;
-    border-radius: 30px;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-
-    top: 8%;
-    /* left: 5%; */
-    /* right: 5%; */
-    left: auto;
-    /* right: auto; */
-    z-index: 3;
-}
-.template {
-    margin: 1px;
-    padding: 1px;
-    height: 100%;
-    width: 50%;
-}
-
-.template form {
-    margin: 20px auto;
-    padding: 40px 2px 20px;
-
-    /* max-width: 100%; */
-    position: relative;
-    top: 14%;
-    left: auto;
-    right: auto;
-
-    max-width: 200px;
-    height: 200px;
-    background-color: white;
-    border-radius: 5px 40px;
+    border-radius: 40px;
     box-shadow: 1px 1px 2px 1px rgba(180, 179, 179, 0.493),
         -1px -1px 2px 1px rgba(170, 167, 167, 0.383);
 }
 
-.template form:hover {
-    box-shadow: 1px 1px 5px 1px rgba(139, 138, 138, 0.589),
-        -1px -1px 5px 1px rgba(170, 167, 167, 0.432);
-}
-.template form input {
-    margin: 10px auto;
-    padding: 2px 3px;
-    display: flex;
-    position: relative;
-
-    border: solid 1px blue;
-
-    width: 130px;
-    height: 20px;
-    border-radius: 8px;
-}
-
-.template form #btn {
-    margin: auto;
-    padding: 6px 50px;
-    display: flex;
-    outline: none;
-    border: none;
-    background-color: rgb(17, 68, 236);
-    font-size: 14px;
-    border-radius: 30px;
-    color: white;
+.preview h5 {
+    margin: 20px auto;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #3366ff;
+    visibility: hidden;
 }
 
 .preview ul {
-    margin: auto;
+    margin: 0px auto;
     padding: 5px;
     list-style-type: none;
-    border: solid 2px silver;
+    /* border: solid 2px silver; */
     border-radius: 20px;
+    display: flex;
 }
 
 .preview ul li {
-    margin: auto;
+    margin: 0px auto;
     padding: 5px;
     list-style-type: none;
-    font-size: 20px;
+    font-size: 14px;
     font-family: sans-serif;
-    color: rgb(73, 72, 75);
+    color: rgb(45, 45, 46);
+    font-weight: bold;
+}
+
+/* Mobile view */
+@media (max-width: 543px) {
+    .preview .videoBox {
+        margin: auto;
+        padding: 0px;
+
+        position: relative;
+        top: 1%;
+        left: 2%;
+        right: 2%;
+        max-width: 410px;
+        height: auto;
+    }
+    .videoBox .placeholder {
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        width: 410px;
+        height: 200px;
+        /* border: solid 1px; */
+        background-color: rgba(115, 145, 245, 0.116);
+        border-radius: 11px;
+    }
+
+    .videoBox .placeholder p {
+        margin: auto;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+        color: rgb(30, 90, 255);
+        /* -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite; */
+        animation: spin 4s linear infinite;
+    }
+
+    @keyframes spin {
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+    .videoBox video {
+        margin: 0px;
+        padding: 0px;
+
+        width: 410px;
+        height: 200px;
+    }
+
+    .videoBox iframe {
+        margin: 0px;
+        padding: 0px;
+        width: 410px;
+        height: 200px;
+    }
+
+    .preview input {
+        margin: 20px auto;
+        padding: 5px 10px;
+        border-radius: 15px;
+        border: solid 1px blue;
+        width: 200px;
+        outline: none;
+    }
+
+    /* Styling for Form */
+
+    .template {
+        margin: auto;
+        padding: 10px;
+        max-height: 330px;
+        width: 500px;
+        border-radius: 30px;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+
+        top: 8%;
+        /* left: 5%; */
+        /* right: 5%; */
+        left: auto;
+        /* right: auto; */
+        z-index: 3;
+    }
+    .template {
+        margin: 1px;
+        padding: 1px;
+        height: 100%;
+        width: 50%;
+    }
+
+    .template form {
+        margin: 10px auto;
+        padding: 20px 2px 2px;
+
+        /* max-width: 100%; */
+        position: relative;
+        top: 37%;
+        left: auto;
+        right: auto;
+
+        max-width: 120px;
+        height: 140px;
+        background-color: white;
+        border-radius: 5px 40px;
+        box-shadow: 1px 1px 2px 1px rgba(180, 179, 179, 0.493),
+            -1px -1px 2px 1px rgba(170, 167, 167, 0.383);
+    }
+
+    .template form:hover {
+        box-shadow: 1px 1px 5px 1px rgba(139, 138, 138, 0.589),
+            -1px -1px 5px 1px rgba(170, 167, 167, 0.432);
+    }
+    .template form input {
+        margin: 5px auto;
+        padding: 2px 3px;
+        display: flex;
+        position: relative;
+
+        border: solid 1px blue;
+
+        width: 100px;
+        height: 11px;
+        border-radius: 8px;
+        font-size: 10px;
+    }
+
+    .template form #btn {
+        margin: 0px auto;
+        padding: 3px 10px;
+        /* display: flex; */
+        outline: none;
+        border: none;
+        background-color: #3366ff;
+        font-size: 11px;
+        border-radius: 30px;
+        color: white;
+    }
+
+    .template form #btn:hover {
+        background-color: hsl(225, 100%, 65%);
+    }
+}
+
+/* for tablet view */
+@media (min-width: 544px) {
+    .preview .videoBox {
+        margin: auto;
+        padding: 0px;
+
+        position: relative;
+        top: 1%;
+        left: 2%;
+        right: 2%;
+        width: 90%;
+        height: auto;
+    }
+    .videoBox .placeholder {
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        height: 400px;
+        min-width: 100%;
+        background-color: rgba(115, 145, 245, 0.116);
+    }
+
+    .videoBox .placeholder p {
+        margin: auto;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+        color: rgb(30, 90, 255);
+        /* -webkit-animation: spin 4s linear infinite;
+        -moz-animation: spin 4s linear infinite; */
+        animation: spin 4s linear infinite;
+    }
+
+    @keyframes spin {
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+    .videoBox video {
+        margin: 0px;
+        padding: 0px;
+
+        height: 400px;
+        width: 100%;
+    }
+
+    .videoBox iframe {
+        margin: 0px;
+        padding: 0px;
+        height: 400px;
+        width: 100%;
+    }
+
+    .preview input {
+        margin: 20px auto;
+        padding: 5px 10px;
+        border-radius: 15px;
+        border: solid 1px blue;
+        width: 200px;
+        outline: none;
+    }
+
+    /* Styling for Form */
+
+    .template {
+        margin: auto;
+        padding: 10px;
+        max-height: 330px;
+        width: 500px;
+        border-radius: 30px;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+
+        top: 8%;
+        /* left: 5%; */
+        /* right: 5%; */
+        left: auto;
+        /* right: auto; */
+        z-index: 3;
+    }
+    .template {
+        margin: 1px;
+        padding: 1px;
+        height: 100%;
+        width: 50%;
+    }
+
+    .template form {
+        margin: 20px auto;
+        padding: 40px 2px 20px;
+
+        /* max-width: 100%; */
+        position: relative;
+        top: 52%;
+        left: auto;
+        right: auto;
+
+        max-width: 200px;
+        height: 200px;
+        background-color: white;
+        border-radius: 5px 40px;
+        box-shadow: 1px 1px 2px 1px rgba(180, 179, 179, 0.493),
+            -1px -1px 2px 1px rgba(170, 167, 167, 0.383);
+    }
+
+    .template form:hover {
+        box-shadow: 1px 1px 5px 1px rgba(139, 138, 138, 0.589),
+            -1px -1px 5px 1px rgba(170, 167, 167, 0.432);
+    }
+    .template form input {
+        margin: 10px auto;
+        padding: 2px 3px;
+        display: flex;
+        position: relative;
+
+        border: solid 1px blue;
+
+        width: 130px;
+        height: 20px;
+        border-radius: 8px;
+    }
+
+    .template form #btn {
+        margin: auto;
+        padding: 6px 50px;
+        display: flex;
+        outline: none;
+        border: none;
+        background-color: #3366ff;
+        font-size: 14px;
+        border-radius: 30px;
+        color: white;
+    }
+
+    .template form #btn:hover {
+        background-color: hsl(225, 100%, 65%);
+    }
+}
+
+/* Desktop styling */
+@media (min-width: 1020px) {
+    .preview .videoBox {
+        margin: auto;
+        padding: 0px;
+
+        position: relative;
+        top: 0%;
+        left: 2%;
+        right: 2%;
+        width: 900px;
+        height: auto;
+    }
+    .preview .videoBox .placeholder {
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        height: 400px;
+        min-width: 100%;
+        background-color: rgba(115, 145, 245, 0.116);
+        border-radius: 11px;
+    }
+
+    .videoBox .placeholder p {
+        margin: auto;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+        color: rgb(30, 90, 255);
+        /* -webkit-animation: spin 4s linear infinite;
+        -moz-animation: spin 4s linear infinite; */
+        animation: spin 4s linear infinite;
+    }
+
+    @keyframes spin {
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+    .videoBox video {
+        margin: 0px;
+        padding: 0px;
+
+        height: 400px;
+        width: 100%;
+    }
+
+    .videoBox iframe {
+        margin: 0px;
+        padding: 0px;
+        height: 400px;
+        width: 100%;
+    }
+
+    .preview input {
+        margin: 20px auto;
+        padding: 5px 10px;
+
+        display: flex;
+        border-radius: 15px;
+        border: solid 1px blue;
+        width: 200px;
+        outline: none;
+    }
+
+    /* Styling for Form */
+
+    .template {
+        margin: auto;
+        padding: 10px;
+        max-height: 330px;
+        width: 500px;
+        border-radius: 30px;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+
+        top: 8%;
+        /* left: 5%; */
+        /* right: 5%; */
+        left: auto;
+        /* right: auto; */
+        z-index: 3;
+    }
+    .template {
+        margin: 1px;
+        padding: 1px;
+        height: 100%;
+        width: 50%;
+    }
+
+    .template form {
+        margin: 20px auto;
+        padding: 40px 2px 20px;
+
+        /* max-width: 100%; */
+        position: relative;
+        top: 48%;
+        left: auto;
+        right: auto;
+
+        max-width: 200px;
+        height: 200px;
+        background-color: white;
+        border-radius: 5px 40px;
+        box-shadow: 1px 1px 2px 1px rgba(180, 179, 179, 0.493),
+            -1px -1px 2px 1px rgba(170, 167, 167, 0.383);
+    }
+
+    .template form:hover {
+        box-shadow: 1px 1px 5px 1px rgba(139, 138, 138, 0.589),
+            -1px -1px 5px 1px rgba(170, 167, 167, 0.432);
+    }
+    .template form input {
+        margin: 10px auto;
+        padding: 2px 3px;
+        display: flex;
+        position: relative;
+
+        border: solid 1px blue;
+
+        width: 130px;
+        height: 20px;
+        border-radius: 8px;
+    }
+
+    .template form #btn {
+        margin: auto;
+        padding: 6px 50px;
+        display: flex;
+        outline: none;
+        border: none;
+        background-color: #3366ff;
+        font-size: 14px;
+        border-radius: 30px;
+        color: white;
+    }
+
+    .template form #btn:hover {
+        background-color: hsl(225, 100%, 65%);
+    }
 }
