@@ -17,15 +17,19 @@ function App() {
     return (
         <div className="App">
             <div className="AppBackground">
-                <div className="App-logo">
-                    <Link to={"/"}>
-                        <img
-                            src="http://www.appclicktech.com/imgs/appclicktechnology-logo-website-developer-ibadan.png"
-                            alt="AppClick-Logo"
-                        />
-                    </Link>
+                <div
+                    className="App-logo"
+                    onClick={() => window.location.replace("/")}
+                >
+                    <img
+                        src="http://www.appclicktech.com/imgs/appclicktechnology-logo-website-developer-ibadan.png"
+                        alt="AppClick-Logo"
+                    />
                 </div>
 
+                {/* /////////////////// */}
+                <Index />
+                {/* ////////////////// */}
                 <Router>
                     <Routes>
                         <Route path="/home" element={<Home />} />
