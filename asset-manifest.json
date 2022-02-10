@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AppClick-Test-Project/static/css/main.1b87cb87.css",
+    "main.js": "/AppClick-Test-Project/static/js/main.17da9f1d.js",
+    "index.html": "/AppClick-Test-Project/index.html",
+    "main.1b87cb87.css.map": "/AppClick-Test-Project/static/css/main.1b87cb87.css.map",
+    "main.17da9f1d.js.map": "/AppClick-Test-Project/static/js/main.17da9f1d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b87cb87.css",
+    "static/js/main.17da9f1d.js"
+  ]
+}
