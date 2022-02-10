@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/AppClick-Test-Project/static/css/main.1b87cb87.css",
-    "main.js": "/AppClick-Test-Project/static/js/main.0d426cd0.js",
+    "main.js": "/AppClick-Test-Project/static/js/main.59fdde26.js",
     "index.html": "/AppClick-Test-Project/index.html",
     "main.1b87cb87.css.map": "/AppClick-Test-Project/static/css/main.1b87cb87.css.map",
-    "main.0d426cd0.js.map": "/AppClick-Test-Project/static/js/main.0d426cd0.js.map"
+    "main.59fdde26.js.map": "/AppClick-Test-Project/static/js/main.59fdde26.js.map"
   },
   "entrypoints": [
     "static/css/main.1b87cb87.css",
-    "static/js/main.0d426cd0.js"
+    "static/js/main.59fdde26.js"
   ]
 }
