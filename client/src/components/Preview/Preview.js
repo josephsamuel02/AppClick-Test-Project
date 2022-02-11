@@ -44,6 +44,19 @@ const Preview = () => {
                             borderRadius: formStyle.formBorder,
                         }}
                     >
+                        <h6
+                            style={{
+                                margin: " 0px 10px",
+                                padding: "3px 6px",
+                                backgroundColor: "silver",
+                                display: "flex",
+                                borderRadius: "50px",
+                                float: "right",
+                                color: "blue",
+                            }}
+                        >
+                            X
+                        </h6>
                         <br /> <br />
                         <input
                             type="text"
@@ -52,7 +65,9 @@ const Preview = () => {
                                 color: formStyle.textColor,
                                 fontSize: formStyle.fontSize,
                             }}
-                            onChange={(e) => setName(e.target.value)}
+                            onChange={(e) => {
+                                setName(e.target.value);
+                            }}
                         />
                         <input
                             type="text"
@@ -107,15 +122,23 @@ const Preview = () => {
                 )}
 
                 {videoUrl && (
+                    // <iframe
+                    //     width="560"
+                    //     height="315"
+                    //     src={`https://www.youtube.com/embed/${videoUrl}`}
+                    //     title="YouTube video player"
+                    //     frameborder="0"
+                    //     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    // ></iframe>
+
                     <iframe
                         width="560"
                         height="315"
                         src={`https://www.youtube.com/embed/${videoUrl}`}
                         title="YouTube video player"
-                        allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        // onChange={() => {
-
-                        // }}
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
                     ></iframe>
                 )}
             </div>
@@ -127,6 +150,10 @@ const Preview = () => {
                     setVideoPlaceH(false);
                     setVideofile(false);
                     setVideoUrl(url);
+
+                    setTimeout(() => {
+                        setForm(true);
+                    }, formStyle.popTime);
                 }}
             />
             <h4 style={{ margin: "0px", color: "blue", display: "flex" }}>
