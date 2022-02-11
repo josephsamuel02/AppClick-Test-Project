@@ -53,6 +53,11 @@ const Preview = () => {
                                 borderRadius: "50px",
                                 float: "right",
                                 color: "blue",
+                                cursor: "pointer",
+                                fontFamily: "sans-serif",
+                            }}
+                            onClick={() => {
+                                setForm(false);
                             }}
                         >
                             X
