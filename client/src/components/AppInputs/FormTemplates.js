@@ -4,14 +4,22 @@ import { Link } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 import { FormDetail } from "../../store/actions/FormDetail";
+
 const FormTemplates = () => {
     const dispatch = useDispatch();
+
     const [theme, setTheme] = useState();
+
     const [textColor, setTextColor] = useState();
+
     const [fSize, setFSize] = useState();
+
     const [formposition, setFormposition] = useState();
+
     const [popTime, sePupTiime] = useState();
+
     const [formBorder, setFormBorder] = useState();
+
     const formDetails = {
         theme: theme,
         textColor: textColor,
@@ -25,7 +33,7 @@ const FormTemplates = () => {
         dispatch(FormDetail(formDetails));
     };
 
-    const mystyle1 = {
+    const style1 = {
         margin: "20px auto",
         padding: "40px 2px 20px",
 
@@ -37,7 +45,7 @@ const FormTemplates = () => {
         bordeRadius: " 5px 40px",
     };
 
-    const mystyle2 = {
+    const style2 = {
         margin: "20px auto 3px",
         padding: "40px 2px 20px",
         position: "relative",
@@ -47,7 +55,7 @@ const FormTemplates = () => {
         backgroundColor: theme,
         borderRadius: "100px",
     };
-    const [temp, setTemp] = useState(mystyle1);
+    const [temp, setTemp] = useState(style1);
 
     return (
         <div className="formTemplates">
@@ -56,7 +64,7 @@ const FormTemplates = () => {
                     <button
                         className="tempbtn"
                         onClick={() => {
-                            setTemp(mystyle1);
+                            setTemp(style1);
                             setFormBorder("5px 40px");
                         }}
                     >
@@ -66,7 +74,7 @@ const FormTemplates = () => {
                     <button
                         className="tempbtn"
                         onClick={() => {
-                            setTemp(mystyle2);
+                            setTemp(style2);
                             setFormBorder("100px");
                         }}
                     >
@@ -86,7 +94,11 @@ const FormTemplates = () => {
                         style={{ color: textColor, fontSize: fSize + "px" }}
                     />
                     <br /> <br />
-                    <button type="submit" id="btn">
+                    <button
+                        type="submit"
+                        id="btn"
+                        onClick={(e) => e.preventDefault()}
+                    >
                         Submit
                     </button>
                     <br /> <br />
@@ -104,9 +116,9 @@ const FormTemplates = () => {
                             // value={theme}
                             onChange={(e) => {
                                 setTheme(e.target.value);
-                                temp == mystyle2
-                                    ? setTemp(mystyle2)
-                                    : setTemp(mystyle1);
+                                temp == style2
+                                    ? setTemp(style2)
+                                    : setTemp(style1);
                             }}
                         />
                     </span>

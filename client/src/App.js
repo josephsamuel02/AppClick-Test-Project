@@ -4,7 +4,7 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    // Navigate,
+    Navigate,
     // Link,
 } from "react-router-dom";
 
@@ -28,7 +28,7 @@ function App() {
                     <Routes>
                         <Route path="/home" element={<Home />} />
                         <Route path="/preview" element={<Preview />} />
-                        {/* <Route
+                        <Route
                             path="/"
                             element={
                                 theuser ? (
@@ -37,9 +37,9 @@ function App() {
                                     <Index />
                                 )
                             }
-                        /> */}
+                        />
                         <Route path="/templates" element={<FormTemplates />} />
-                        <Route path="/" element={<Index />} />{" "}
+                        {/* <Route path="/" element={<Index />} /> */}
                     </Routes>
                 </Router>
             </div>

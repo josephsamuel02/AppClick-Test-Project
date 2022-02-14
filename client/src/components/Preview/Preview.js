@@ -127,15 +127,6 @@ const Preview = () => {
                 )}
 
                 {videoUrl && (
-                    // <iframe
-                    //     width="560"
-                    //     height="315"
-                    //     src={`https://www.youtube.com/embed/${videoUrl}`}
-                    //     title="YouTube video player"
-                    //     frameborder="0"
-                    //     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    // ></iframe>
-
                     <iframe
                         width="560"
                         height="315"
@@ -158,7 +149,7 @@ const Preview = () => {
 
                     setTimeout(() => {
                         setForm(true);
-                    }, formStyle.popTime);
+                    }, formStyle.popTime + 2000);
                 }}
             />
             <h4 style={{ margin: "0px", color: "blue", display: "flex" }}>
